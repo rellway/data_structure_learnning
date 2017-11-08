@@ -14,6 +14,7 @@ namespace learn_data_structure
 		virtual bool operator <(const IData& data) const = 0;
 		virtual bool operator >(const IData& data) const = 0;
 		virtual IData& operator =(const IData& data) = 0;
+		virtual size_t Size() = 0;
 	};
 }
 #endif

@@ -42,6 +42,10 @@ namespace learn_data_structure
 			data_ = intData.GetInt();
 			return *this;
 		}
+		virtual size_t Size()
+		{
+			return sizeof(IntData);
+		}
 	private:
 		int data_;
 	};

@@ -49,6 +49,10 @@ namespace learn_data_structure
 		{
 			code_ = code;
 		}
+		virtual size_t Size()
+		{
+			return sizeof(HoffmanData);
+		}
 	private:
 		char code_;
 		int weight_;
@@ -66,7 +70,7 @@ namespace learn_data_structure
 				char* data = reinterpret_cast<char*>(node->data->GetData());
 				if (NULL == data)
 					return false;
-				printf("data:%c code:%s\n", *data, code.c_str());
+				//printf("data:%c code:%s\n", *data, code.c_str());
 				map->insert(std::pair<char, std::string>(*data, code));
 				return true;
 			}

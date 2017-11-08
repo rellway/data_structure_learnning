@@ -39,12 +39,33 @@
     <ClInclude Include="HoffmanTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Graph.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTreeTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HoffmanTreeTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DataStructure.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HoffmanTreeTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
