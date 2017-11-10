@@ -53,6 +53,16 @@ namespace learn_data_structure
 		{
 			return sizeof(HoffmanData);
 		}
+		IData& operator[](size_t n)
+		{
+			char* head = reinterpret_cast<char*>(this);
+			IData* iterm = reinterpret_cast<IData*>(head + this->Size());
+			return *iterm;
+		}
+		virtual IData& operator *()
+		{
+			return *this;
+		}
 	private:
 		char code_;
 		int weight_;

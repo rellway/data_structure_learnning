@@ -32,14 +32,15 @@ namespace learn_data_structure
 
 	class BinaryTree
 	{
-	private:
-		BinaryNode* root_;
 	public:
 		BinaryTree()
 		{
 			root_ = NULL;
 		}
-		virtual ~BinaryTree(){};
+		virtual ~BinaryTree()
+		{
+			Delete();
+		}
 		BinaryNode* AddLeft(BinaryNode* node, IData* data)
 		{
 			if (NULL == data)
@@ -206,6 +207,23 @@ namespace learn_data_structure
 			PrintRight(root_);
 			printf("\n");
 		}
+		void Delete(BinaryNode* node)
+		{
+			if (NULL == node)
+				return;
+			Delete(node->lchild);
+			Delete(node->rchild);
+			if (node->data)
+			{
+				delete node->data;
+			}
+		}
+		void Delete()
+		{
+			Delete(root_);
+		}
+		private:
+			BinaryNode* root_;
 	};
 } // end of namespace learn_data_structure
 #endif
