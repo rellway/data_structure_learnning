@@ -13,8 +13,10 @@ namespace learn_data_structure
 		virtual void Print() = 0;
 		virtual bool operator <(const IData& data) const = 0;
 		virtual bool operator >(const IData& data) const = 0;
+		virtual bool operator ==(const IData& data) const = 0;
 		virtual IData& operator =(const IData& data) = 0;
 		virtual size_t Size() = 0;
+		virtual size_t Interpolation(const IData& high, const IData& low, size_t highIndex, size_t lowIndex) = 0;
 	};
 }
 #endif

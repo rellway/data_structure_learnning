@@ -29,18 +29,31 @@ namespace learn_data_structure
 		virtual bool operator <(const IData& data) const
 		{
 			IntData intData = dynamic_cast<const IntData&>(data);
-			return intData.GetInt() < data_;
+			return data_ < intData.GetInt();
 		}
 		virtual bool operator >(const IData& data) const
 		{
 			IntData intData = dynamic_cast<const IntData&>(data);
-			return intData.GetInt() > data_;
+			return data_ > intData.GetInt();
+		}
+		virtual bool operator ==(const IData& data) const
+		{
+			IntData intData = dynamic_cast<const IntData&>(data);
+			return intData.GetInt() == data_;
 		}
 		virtual IData& operator =(const IData& data)
 		{
 			IntData intData = dynamic_cast<const IntData&>(data);
 			data_ = intData.GetInt();
 			return *this;
+		}
+		virtual size_t Interpolation(const IData& high, const IData& low, size_t highIndex, size_t lowIndex)
+		{
+			IntData intHigh = dynamic_cast<const IntData&>(high);
+			IntData intLow = dynamic_cast<const IntData&>(low);
+			float ratio = ((float)(data_ - intLow.GetInt()) / (float)(intHigh.GetInt() - intLow.GetInt()));
+			size_t add = (float)(highIndex - lowIndex) * ratio;
+			return lowIndex + add;
 		}
 		virtual size_t Size()
 		{

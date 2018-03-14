@@ -26,12 +26,23 @@ namespace learn_data_structure
 			HoffmanData hoffmanData = dynamic_cast<const HoffmanData&>(data);
 			return weight_ > hoffmanData.GetWeight();
 		}
+		virtual bool operator ==(const IData& data) const
+		{
+			HoffmanData hoffmanData = dynamic_cast<const HoffmanData&>(data);
+			return weight_ > hoffmanData.GetWeight();
+		}
 		virtual IData& operator =(const IData& data)
 		{
 			HoffmanData hoffmanData = dynamic_cast<const HoffmanData&>(data);
 			weight_ = hoffmanData.GetWeight();
 			code_ = hoffmanData.GetCode();
 			return *this;
+		}
+		virtual size_t Interpolation(const IData& high, const IData& low, size_t highIndex, size_t lowIndex)
+		{
+			HoffmanData hoffmanHigh = dynamic_cast<const HoffmanData&>(high);
+			HoffmanData hoffmanLow = dynamic_cast<const HoffmanData&>(low);
+			return lowIndex + (highIndex - lowIndex) * (weight_ - hoffmanLow.GetWeight()) / (hoffmanHigh.GetWeight() - hoffmanLow.GetWeight());
 		}
 		int GetWeight()
 		{

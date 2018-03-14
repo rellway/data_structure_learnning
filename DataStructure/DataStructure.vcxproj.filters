@@ -51,6 +51,12 @@
     <ClInclude Include="GraphTest.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="BinarySearch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="InterpolationSearch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -66,6 +72,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="GraphTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="InterpolationSearchTest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
