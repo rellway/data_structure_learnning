@@ -8,6 +8,7 @@
 #include "HoffmanTree.h"
 #include "GraphTest.h"
 #include "gtest\gtest.h"
+#include "TrieTree.h"
 
 using namespace learn_data_structure;
 
